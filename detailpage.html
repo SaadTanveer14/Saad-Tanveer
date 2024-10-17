@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .contact-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 16rem;
+            background-color: #f1f3f5;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .banner-text {
+            max-width: 60%;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .banner img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            margin-bottom: 2rem;
+        }
+
+        .content-block h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Screenshot Section */
+        .screenshots {
+            margin-top: 2rem;
+        }
+
+        .screenshots h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+            padding-left: 60px; /* Adds space between the heading and the left edge */
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .screenshot-grid img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .screenshots h2:nth-of-type(2) {
+            margin-top: 40px; /* Adds space between regular and dark mode screenshots */
+        }
+    </style>
+</head>
+<body>
+
+
+    <section class="banner">
+        <div class="banner-text">
+            <h1 id="project-title">Project Title</h1>
+            <p class="tagline" id="project-category">Project Category</p>
+            <div class="intro">
+                <p id="project-description">Project description goes here.</p>
+            </div>
+        </div>
+        <img id="project-image" src="placeholder.png" alt="Project Image">
+    </section>
+
+    <section class="content">
+        <div class="content-block">
+            <h2>Business Problem</h2>
+            <p id="project-business-problem">Business problem description goes here.</p>
+        </div>
+
+        <div class="content-block">
+            <p id="project-big-idea">The big idea goes here.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>Challenges</h2>
+            <p id="project-challenges">Project challenges go here.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>Solution</h2>
+            <ul id="project-solution">
+            </ul>
+        </div>
+    </section>
+
+  
+
+
+    
+
+    <section class="screenshots">
+        <h2 class="banner-text">screenshots</h2>
+        <div class="screenshot-grid" id="screenshot-grid">
+            <!-- Screenshots will be dynamically added here -->
+        </div>
+
+        <h2>Dark Mode Screenshots (Optional)</h2>
+        <div class="screenshot-grid" id="darkmode-screenshot-grid">
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us for more information on this project.</p>
+    </footer>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const projectDetails = {
+            "PMS": {
+                title: "Patient Management System",
+                category: "Healthcare (Tracking and Management)",
+                description: "The Mobile App helps doctors to find their assigned hospital in their Area, mark their presence, and visit patients for feedback and complaints.",
+                businessProblem: "The client wanted a platform to facilitate remote healthcare access during the pandemic.",
+                bigIdea: "Creating a mobile application that enables users to search for healthcare centers and manage complaints remotely.",
+                challenges: "Building a system that works seamlessly across different locations and networks.",
+                solution: ["Location-based healthcare search", "Feedback and complaints management system", "User-friendly interface"],
+                imageUrl: "pms_screenshots/mobile/dashboard_iphone.png",
+                screenshots: ["pms_screenshots/mobile/complaints_iphone.png", 
+                                "pms_screenshots/mobile/hospital_iphone.png", 
+                                "pms_screenshots/mobile/report_iphone.png",
+                                "pms_screenshots/mobile/onboarding_iphone.png",
+                                "pms_screenshots/mobile/profile_iphone.png",
+                                "pms_screenshots/mobile/dashboard_iphone.png",
+                            ],
+                darkModeScreenshots: ["pms_screenshots/mobile/complaints_android.png", 
+                                        "pms_screenshots/mobile/hospital_android.png", 
+                                        "pms_screenshots/mobile/login_android.png",
+                                        "pms_screenshots/mobile/profile_android.png",
+                                        "pms_screenshots/mobile/report_android.png",
+                                        "pms_screenshots/mobile/splash_android.png",
+                                    ]
+            },
+
+            "MOC": {
+                title: "File Mangement System",
+                category: "File Mangement and Tracking",
+                description: "Innovative file management application offers a unique feature that allows users to add handwritten remarks directly on top of their files using a canvas interface. This powerful tool not only enables users to annotate documents with their own handwriting but also seamlessly converts those handwritten remarks into text for easy editing and sharing. In addition to this standout feature, the application provides robust file management capabilities, empowering users to efficiently view, organize, and manage their files. Users can easily reject files that do not meet their standards, ensuring a streamlined workflow. Furthermore, the app allows for the addition of supplementary remarks, enhancing collaboration and communication among users.",
+                businessProblem: "The client wanted a platform that allows users to manage files on ipad just like in a manual setting",
+                challenges: "Building a system that works seamlessly across different locations and networks.",
+                solution: ["Location-based healthcare search", "Feedback and complaints management system", "User-friendly interface"],
+                imageUrl: "moc_screenshots/tab/moc_splash.jpg",
+                screenshots: ["moc_screenshots/tab/moc_login.jpg",  
+                                "moc_screenshots/tab/moc_edit_document.jpg",
+                                "moc_screenshots/tab/moc_additional_note.jpg",
+                                "moc_screenshots/tab/moc_list.jpg",
+                                "moc_screenshots/tab/moc_canvas.jpg",
+                                "moc_screenshots/tab/moc_splash.jpg",
+                            ],
+            },
+
+            "BalochistanHealthCardProgram": {
+                title: "Balochistan Health Card Program",
+                category: "Healthcare",
+                description: "This app helps users find nearby healthcare centers and manage complaints.",
+                businessProblem: "The healthcare system in Balochistan needed streamlining and better access for users.",
+                bigIdea: "Develop an app for healthcare services accessible to remote areas.",
+                challenges: "Ensuring the app works effectively in regions with limited infrastructure.",
+                solution: ["Health center locator", "Issue tracking and complaint resolution", "Optimized for low connectivity"],
+                imageUrl: "smart_clock_screenshots/sc_match.png",
+                screenshots: ["screenshot4.png", "screenshot5.png", "screenshot6.png"]
+            },
+
+            "BalochistanHealthCardProgram": {
+                title: "Balochistan Health Card Program",
+                category: "Healthcare",
+                description: "This app helps users find nearby healthcare centers and manage complaints.",
+                businessProblem: "The healthcare system in Balochistan needed streamlining and better access for users.",
+                bigIdea: "Develop an app for healthcare services accessible to remote areas.",
+                challenges: "Ensuring the app works effectively in regions with limited infrastructure.",
+                solution: ["Health center locator", "Issue tracking and complaint resolution", "Optimized for low connectivity"],
+                imageUrl: "bhcp.png",
+                screenshots: ["screenshot4.png", "screenshot5.png", "screenshot6.png"]
+            },
+
+            "SehatSahulatProgram": {
+                title: "Sehat Sahulat Program",
+                category: "Healthcare",
+                description: "The Mobile App helps users find nearby healthcare centers and provide feedback and complaints if they face any problems.",
+                businessProblem: "The client wanted a platform to facilitate remote healthcare access during the pandemic.",
+                bigIdea: "Creating a mobile application that enables users to search for healthcare centers and manage complaints remotely.",
+                challenges: "Building a system that works seamlessly across different locations and networks.",
+                solution: ["Location-based healthcare search", "Feedback and complaints management system", "User-friendly interface"],
+                imageUrl: "kpkssp.png",
+                screenshots: ["screenshot1.png", "screenshot2.png", "screenshot3.png"]
+            },
+
+        };
+
+        window.onload = function() {
+            const projectKey = getQueryParam('project');
+            const project = projectDetails[projectKey];
+
+            if (project) {
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-category').textContent = project.category;
+                document.getElementById('project-description').textContent = project.description;
+                document.getElementById('project-business-problem').textContent = project.businessProblem;
+                document.getElementById('project-big-idea').textContent = project.bigIdea;
+                document.getElementById('project-challenges').textContent = project.challenges;
+
+                const solutionList = document.getElementById('project-solution');
+                solutionList.innerHTML = ""; // Clear existing list
+                project.solution.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    solutionList.appendChild(li);
+                });
+
+                document.getElementById('project-image').src = project.imageUrl;
+
+                // Add screenshots
+                const screenshotGrid = document.getElementById('screenshot-grid');
+                project.screenshots.forEach(screenshot => {
+                    const img = document.createElement('img');
+                    img.src = screenshot;
+                    img.alt = "Screenshot";
+                    screenshotGrid.appendChild(img);
+                });
+
+                // Add dark mode screenshots (if any)
+                if (project.darkModeScreenshots && project.darkModeScreenshots.length > 0) {
+                    const darkmodeGrid = document.getElementById('darkmode-screenshot-grid');
+                    project.darkModeScreenshots.forEach(screenshot => {
+                        const img = document.createElement('img');
+                        img.src = screenshot;
+                        img.alt = "Dark Mode Screenshot";
+                        darkmodeGrid.appendChild(img);
+                    });
+                } else {
+                    // Hide dark mode heading and grid if no dark mode screenshots
+                    document.querySelector('#darkmode-screenshot-grid').style.display = 'none';
+                    document.querySelector('#darkmode-screenshot-grid').previousElementSibling.style.display = 'none';  // Hides the "Dark Mode Screenshots" heading
+                }
+            } else {
+                document.getElementById('project-title').textContent = "Project not found";
+            }
+        }
+    </script>
+</body>
+</html>

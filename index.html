@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .ios-intro {
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", "Arial", sans-serif;
+            font-size: 1.5em;
+            color: #000;
+            background-color: #f0f0f0;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .introduction-section {
+            background-color: #0b0b0b;
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .intro-text {
+            max-width: 600px;
+            font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", "Arial", sans-serif;
+
+        }
+
+        .intro-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #bababa;
+        }
+
+        .intro-text button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .intro-text button:hover {
+            background-color: #218838;
+        }
+
+        .intro-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .project-card {
+            background-color: #f2e7e7;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .card-content {
+            flex: 2;
+            margin-right: 20px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: #2a2a2a;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #2a2a2a;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 10px 0 20px;
+            color: #555;
+        }
+
+        .tech-tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            display: inline-block;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .start-btn, .explore-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .start-btn {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .explore-btn {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #333;
+        }
+
+        .card-image {
+            flex: 1;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            max-height: 300px;
+        }
+
+        .card-image img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                flex-direction: column;
+            }
+
+            .card-content {
+                margin-right: 0;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
+
+            .start-btn, .explore-btn {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Introduction Section -->
+    <div class="introduction-section">
+        <div class="intro-text" >
+            <h1>Muhammad Saad Tanveer</h1>
+            <p>I am a Full Stack Mobile Application Developer specializing in Flutter, with extensive experience in building dynamic and feature-rich mobile apps for both iOS and Android. My expertise spans platform-specific functionalities, ensuring seamless performance on each device. Alongside development, I also bring creativity into my projects through design, delivering visually appealing and user-friendly apps.</p>
+            <button>Let's get started ></button>
+        </div>
+        <div class="intro-image">
+            <img src="profile_image.jpg" alt="Profile Image">
+        </div>
+
+        
+    </div>
+
+    <!-- Project List -->
+    <div class="project-list">
+
+        <div class="project-card" style = "background-color: #ccdbfd">
+            <div class="card-content">
+                <h3>Healthcare (Tracking and Management)</h3>
+                <h1>Patient Management System</h1>
+                <p>
+                    The Mobile App helps doctors to find their assigned hospital in their Area Mark their presence there and visit patients for their feedback and complaints if they face any problems.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Flutter, Dart</span>
+                    <span class="tag">Apex</span>
+                    <span class="tag">IOS, ANDROID</span>
+
+                </div>
+                <div class="buttons">
+                    <button class="start-btn">Start Project</button>
+                    <button class="explore-btn" onclick="window.location.href='detailpage1.html?project=PMS';">Explore more</button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="pms_screenshots/mobile/dashboard_iphone.png" alt="Sehat Sahulat Program">
+            </div>
+
+        </div>
+
+
+        <div class="project-card" style = "background-color: #c7f9cc">
+            <div class="card-content" >
+                <h3>MOC File Management</h3>
+                <h1>File Tracking and Management</h1>
+                <p>
+                    The iPad application allows users to view files, add handwritten remarks, and manage the files accordingly for review or finalization.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Flutter, Dart</span>
+                    <span class="tag">Apex</span>
+                    <span class="tag">IPAD</span>
+                    <span class="tag">Apple Pen</span>
+                </div>
+                <div class="buttons">
+                    <button class="start-btn">Start Project</button>
+                    <button class="explore-btn" onclick="window.location.href='detailpage1.html?project=MOC';">Explore more</button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="moc_screenshots/tab/moc_canvas.jpg" alt="Minister of Commerce">
+            </div>
+        </div>
+
+
+        <div class="project-card" style = "background-color: #e5e5e5">
+            <div class="card-content">
+                <h3>Utility App</h3>
+                <h1>Smart Clock</h1>
+                <p>
+                    Stay updated with personalized football news and live match updates for your favorite teams and players. Enjoy real-time schedules and scores, all while using the app's always-on clock feature to keep track of time and match start times seamlessly.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">APEX( APIs, SQL )</span>
+                </div>
+                <div class="buttons">
+                    <button class="start-btn">Start Project</button>
+                    <button class="explore-btn" onclick="window.location.href='detailpage1.html?project=SC';">Explore more</button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="smart_clock_screenshots/sc_matchs.png" alt="Smart Clock">
+            </div>
+        </div>
+
+        <div class="project-card" style = "background-color: #cce3de">
+            <div class="card-content">
+                <h3>Healthcare</h3>
+                <h1>Balochistan Health Card Program</h1>
+                <p>
+                    The Mobile App helps users find their nearby healthcare center and provide feedback and complaints if they face any problems.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Dart</span>
+                    <span class="tag">APEX( APIs, SQL )</span>
+                </div>
+                <div class="buttons">
+                    <button class="start-btn">Start Project</button>
+                    <button class="explore-btn" onclick="window.location.href='detailpage1.html?project=BalochistanHealthCardProgram';">Explore more</button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="bhcp_screenshots/bhcp_home.png" alt="Balochistan Health Card Program">
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="card-content">
+                <h3>Healthcare</h3>
+                <h1>Sehat Sahulat Program</h1>
+                <p>
+                    The Mobile App helps users find their nearby healthcare center and provide feedback and complaints if they face any problems.
+                </p>
+                <div class="tech-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">JavaScript (Node.js)</span>
+                    <span class="tag">Dart</span>
+                </div>
+                <div class="buttons">
+                    <button class="start-btn">Start Project</button>
+                    <button class="explore-btn" onclick="window.location.href='detailpage1.html?project=SehatSahulatProgram';">Explore more</button>
+                </div>
+            </div>
+            <div class="card-image">
+                <img src="kpkssp.png" alt="Sehat Sahulat Program">
+            </div>
+        </div>
+
+        <!-- Repeat the same project-card structure for other projects -->
+
+    </div>
+</body>
+</html>
